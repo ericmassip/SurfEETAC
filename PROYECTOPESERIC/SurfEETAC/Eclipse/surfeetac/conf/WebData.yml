@@ -1,0 +1,232 @@
+# Test data
+
+User(bob):
+    password:       secret
+    username:       Bob
+    
+User(jeff):
+    password:       secret
+    username:       Jeff
+
+User(admin):
+    password:       admin
+    username:       admin
+    isAdmin:        true
+    
+Spot(ThePeak):
+    surfer:         admin
+    place:          Ireland
+    name:           The Peak
+    description:    >
+                    One of the most consistent and best quality reef breaks in Ireland, the Peak is best surfed at low tide. This A-frame wave produces a long walling left with barrell sections, and a shorter right that can be quite hollow. Experienced surfers only. Can get crowded. Offshore in SE winds. When the swell is big the left can close out however the right can handle nearly any swell.
+    path:           \public\images\SpotFotos\The_Peak_Bundoran.jpg
+
+Spot(PortGinesta):
+    surfer:         admin
+    place:          Catalunya
+    name:           Port Ginesta
+    description:    >
+                    Located next to the marina of Port Ginesta is a good choice day South Sea . For optimal performance of a medium or large swell necessary S - SE. The wave consists of several sections and everything depends on the amount of swell and the direction thereof. On good days the wave appears close to the rocks , this section is the most powerful but also the most exposed to currents and winds in this area are usually strong . There is an intermediate section that is more sheltered but in which the wave is flabby and lose some power.
+    path:           \public\images\SpotFotos\Port_Ginesta.jpg
+    
+Spot(BanzaiPipeline):
+    surfer:         admin
+    place:          Hawaii
+    name:           Banzai Pipeline
+    description:    >
+                    The Banzai Pipeline, or simply "Pipeline" or "Pipe," is a surf reef break located in Hawaii, off Sunset Beach Park in Pupukea on O'ahu's North Shore. A reef break is an area in the ocean where waves start to break once they reach the shallows of a reef. Pipeline is notorious for huge waves which break in shallow water just above a sharp and cavernous reef, forming large, hollow, thick curls of water that surfers can tube ride. There are three reefs at Pipeline in progressively deeper water further out to sea that activate according to the increasing size of approaching ocean swells.
+    path:           \public\images\SpotFotos\BanzaiPipeline.jpg
+    
+Spot(LaPiste):
+    surfer:         admin
+    place:          France
+    name:           La Piste
+    description:    >
+                    Spot to the left of the great Hossegor . When La Graviere is too large, La Piste is the best choice .
+                    It is a beach break , multiple peaks and multiple barrells that you can make.
+    path:           \public\images\SpotFotos\LaPiste.jpg
+    
+Spot(TullanStrand):
+    surfer:         admin
+    place:          Ireland
+    name:           Tullan Strand
+    description:    >
+                    Spot to the left of the great Hossegor . When La Graviere is too large, La Piste is the best choice .
+                    It is a beach break , multiple peaks and multiple barrells that you can make.
+    path:           \public\images\SpotFotos\TullanStrand.jpg
+    
+Spot(Rossnowlagh):
+    surfer:         admin
+    place:          Ireland
+    name:           Rossnowlagh Beach
+    description:    >
+                    Home to the annual Intercounties contest Rossnowlagh is best surfed on a mid to high tide, and has plenty of space all along the beach to accommodate any number of surfers. The waves here tend to be more mellow than Bundoran, so it is a good option if Tullan is big. Good conditions for learning. Rossnowlagh also picks up south swell. Offshore in east and south east winds. Located five miles from Ballyshannon.
+    path:           \public\images\SpotFotos\Rossnowlagh.jpg
+    
+Spot(Mullaghmore):
+    surfer:         admin
+    place:          Ireland
+    name:           Mullaghmore
+    description:    >
+                    Ireland’s premier big-wave spot. The Head is a savage, shallow, lefthand reefbreak only surfable on high tide. Handles any size swell, producing massive tubes, but needs to be well overhead to break clear of exposed rocks. Offshore in a SW so makes the most of big winter storms. Has been paddled but is becoming known as tow-in spot.
+    path:           \public\images\SpotFotos\Mullaghmore.jpg
+    
+Spot(Waimea):
+    surfer:         admin
+    place:          Hawaii
+    name:           Waimea Bay
+    description:    >
+                    The surf break at Waimea Bay was significant in the development of Big wave surfing. Larger surf at the bay went unridden for years until November 7, 1957[1] when a handful of surfers finally paddled out and rode the giant waves that break off the northern point of the bay. While the surf only breaks big several times a year, Waimea was the most prestigious big wave surf break in the world for decades. With the advent of tow-in surfing, more and more big wave breaks have been discovered that are far superior in quality to Waimea. However, the bay still holds a significant place even in today's world of big wave surfing.
+    path:           \public\images\SpotFotos\WaimeaBay.jpg
+    
+Spot(Sunset):
+    surfer:         admin
+    place:          Hawaii
+    name:           Sunset Beach
+    description:    >
+                    Past Kammieland, a fun near-shore peak opposite Kammies Market, the famous Sunset Beach starts it's curve northwards. Incorporating Vals, Inside Bowl, West Peak, Middles and Sunset Point on the inside, this break has more personalities than reality TV. Under headhigh, NE windswell will still break at The Point, then overhead, W-NW swells start popping up over the fingers of reef at Middles, before double-overhead awakens Inside Bowl and maybe West Peak on a long period W-NW swell. Sunset's default mode is unpredictable as N swells will break up along the ragged hem of reef, while W will launch threatening slabs from wide, punishing the reckless in the turbulent inside. When the long, roller-coaster rights lead into the hollow Inside Bowl, board, leash and body snapping power is apparent, with many shutdowns and unmakeable sections before the wave fattens out into the channel. The real difficulty is trying to get a bomb set off the entrenched local crew on large boards who dominate, leaving mere mortals to dodge the bullets on the inside. 15ft Hawaiian for upper size limit when Outside Backyards sets start to wash through.
+    path:           \public\images\SpotFotos\Sunset.jpg
+    
+Spot(LaFitenia):
+    surfer:         admin
+    place:          France
+    name:           La Fitenia
+    description:    >
+                    Popular peak with range of moods from small cutback shoulders to big bowls and racy walls. Needs any S swell to work and the rights are usually better. Gets very crowded as it is inconsistent and often the only wave working in certain conditions. Intermediates up – some localism.
+    path:           \public\images\SpotFotos\LaFitenia.jpg
+    
+Spot(Hossegor):
+    surfer:         admin
+    place:          France
+    name:           Hossegor
+    description:    >
+                    Sited on an old gravel pit, this is the legendary Hossegor tube spot. Dredging the rivermouth has affected wave quality in the past, but it is back with a vengeance, hosting pro-surfing competitions in huge conditions, including the 2011 Quik Pro. Sometimes white-caps outside, rolls in and reforms, standing up over the shallow inside bars. Heavy, thick-lipped beasts, break perilously close to shore and often close-out, snapping more boards than just about anywhere. Tidal range radically affects the window for ideal conditions, as does swell period, which decides if it is messy and inconsistent or lined-up and bombing through. The rip speed usually rises in direct proportion with the swell height and on big days, only the tow crew will be able to get into the sets before being swept south in the current.
+    path:           \public\images\SpotFotos\Hossegor.jpg
+    
+Spot(Barceloneta):
+    surfer:         admin
+    place:          Catalunya
+    name:           Barceloneta
+    description:    >
+                    Barcelonas most popular surf beach with peaky rights and lefts over shifting sandbars. Best when Tramuntana N/NE wind has been blowing for a few days. Always crowded whenever there are waves. The water quality has improved but stormwater is filthy after rain. Great atmosphere especially in the old part of the city (Barrio Gótico and Borne). Metered parking can be very difficult and car break-ins are not uncommon.
+    path:           \public\images\SpotFotos\Barceloneta.jpg
+    
+Spot(Montgat):
+    surfer:         admin
+    place:          Catalunya
+    name:           Montgat
+    description:    >
+                    Plenty of beachbreak peaks including a short hollow right and a longer sectiony left. Rotonda is usually the best, but it gets crowded with Catalan surfers when on. Be respectful to the local riders as crowding is increasingly causing problems. Parking is normally okay but beware of rip-offs. Surfshop in Masnou.
+    path:           \public\images\SpotFotos\Montgat.jpg
+    
+Spot(Sitges):
+    surfer:         admin
+    place:          Catalunya
+    name:           Sitges
+    description:    >
+                    A popular stretch of beaches with various shifting peaks. Quality varies from mushy slop to sweet barrels. In S swells a righthander situated close to the Aiguadolc port can be good. Sitges has a long surfing tradition. Parking is tough at weekends. Tourist town night life and good seafood restaurants. From the Highway get off at Sitges Centre and follow the road and the signs to the beach. Parking is tough to get during the weekends because it is a very touristic town. A lot of night life.
+    path:           \public\images\SpotFotos\Sitges.jpg
+    
+Spot(Badalona):
+    surfer:         admin
+    place:          Catalunya
+    name:           Badalona
+    description:    >
+                    Long beach right after Barcelona, hollow waves, if it's big enough it barrells easily. It breaks next to a pier, it can be really good.
+    path:           \public\images\SpotFotos\Badalona.jpg
+    
+Spot(Masnou):
+    surfer:         admin
+    place:          Catalunya
+    name:           Masnou
+    description:    >
+                    Probably the longest wave in the area and it can handle any size when the Med gets rough. Only starts working at waisthigh. Left walls sweep down the beach – timing needed to jump in off the jetty. Can get crowded but it’s worth it when it’s firing. Easy parking. Great sunset views over Barcelona.
+    path:           \public\images\SpotFotos\Masnou.jpg
+    
+Spot(AnchorPoint):
+    surfer:         admin
+    place:          Morocco
+    name:           Anchor Point
+    description:    >
+                    A medium to large, long period NW swell is what’s needed to light-up this world-class right, first surfed by Aussies in the 1960’s. From the steep take-off at the outside peak, a seemingly endless succession of speed walls and cutback hooks present themselves. Occasional emerald green rooms appear on the sandy sections down the point. It’s easier to come in at one of the coves and walk back to jump off at the end between sets. Works on all but high tides, unless it’s huge, which is when it may be possible to ride back to Tarhazoute. Always crowded, especially when small , but the crowd spreads as length of ride and the current increases with size.
+    path:           \public\images\SpotFotos\AnchorPoint.jpg
+    
+Spot(Taghazout):
+    surfer:         admin
+    place:          Morocco
+    name:           Taghazout
+    description:    >
+                    Often snubbed by Anka’s aficionados since it’s fickle, fast and plagued by currents. Less crowds and good barrels are the trade-off.
+    path:           \public\images\SpotFotos\Taghazout.jpg
+    
+Spot(Kirra):
+    surfer:         admin
+    place:          Australia
+    name:           Kirra
+    description:    >
+                    Kirra is Australia’s and probably the world’s best righthand point that breaks over sand. Air drops into various tube sections, which seem to suck out below sea level, adding sand to the already ridiculously powerful and thick lips. Super long, slabby sections need breakneck speed to negotiate while praying the inevitable drop-in wont happen on the deepest tube of your life. After the First Groyne was built in the early Seventies, Kirra went into coma for a couple of years before re-awakening better than ever when the sand returned. Second Groyne was built in 1980 and gets just as dredgy as big brother. Kirra holds major swells plus crowds that all other crowds can be measured by! It all depends on the sand and these days with all the pumping and re-nourishment projects going on, the set up is prone to change. Many mourned the 2nd passing of Kirra in the Noughties when the Second (Little) Groyne got buried, the sand piled up and even lefts started breaking, but it has slowly recovered and breaks at about a third to a half the size of the prevailing swell. Big, solid SE groundswell is the preferred element, while E and even NE cyclone swells can also produce epic barrels if the sand is right.
+    path:           \public\images\SpotFotos\Kirra.jpg
+    
+Spot(BellsBeach):
+    surfer:         admin
+    place:          Australia
+    name:           Bells Beach
+    description:    >
+                    Victoria’s most famous surf spot is a classic and consistent right point that breaks on almost any tide, any wind and any decent swell from SE-SW. It’s a long wave broken into 3 sections (which may just link up in huge swells), starting outside at Rincon, leading into Bell's Bowl and finishing in the beach shorebreak. Power is always associated with this wave and few escape the flogging of an outside set on the head and gruelling paddle outs as it grows beyond double overhead. When small it is playful and ripable, offering endless carve and cutback corners along a lengthy platform reef that is prone to some long, unmakeable sections. Will be at it best in wrapping SW swell and NW winds, but will still have takers in ugly onshore conditions as well. If the crazy crowd is too much, on the headland to the south there are more rights at Centreside that are lower quality and less intimidating than Bell's plus some real decent lefts in SE swells and higher tides at Southside.
+    path:           \public\images\SpotFotos\BellsBeach.jpg
+    
+Spot(Mundaka):
+    surfer:         admin
+    place:          Basque Country
+    name:           Mundaka
+    description:    >
+                    Mundaka is a dream lefthand barrel and possibly the best rivermouth wave in the world. A long triangular sandbank catches the stronger NW swells, creating a long flawless tube with rides of up to 150-200 meters possible. From the peak, the wave sucks up hard, making for steep challenging take-offs straight into a sick barrel section. The ensuing long, fast wall, allows a few turns if you are going close to warp speed. The final two sections of the wave can vary in quality depending on the sandbar, but frequently they offer hollow cylinders with less crowd pressure. Perfect autumn conditions include strong S-SW winds and the tide must be low incoming, otherwise the outgoing rip is horrendous. Good conditions at Mundaka rarely last for more than two days, as the large swells fade, so this classy wave is only rideable about 50 days a year.
+    path:           \public\images\SpotFotos\Mundaka.jpg
+    
+Spot(Cloudbreak):
+    surfer:         admin
+    place:          Fiji
+    name:           Cloudbreak
+    description:    >
+                    Once the exclusive domain of well-heeled surfers able to pay the hefty daily rate to stay at the Tavarua Island surf resort, the Fijian government recently changed the law which allowed the resort to control access to this now legendary reef pass. While the perfect pictures of Cloudbreak suggest flawless left barrels for one and all, this is a tricky wave with multiple sections and a malevolent side that keeps even the best surfers on their toes. The outside section at the top Point of the reef holds plenty of size and the vertiginous roll-ins lead into a flying wall section where speed carves are possible. Middles is where turns are less useful and the barrel starts to wind up, covering a lot of distance in a short time. Insides, or Shish-kabobs, is where the reef gets extremely shallow and the tubes get extremely... extreme! Less confident surfers thinking they can pick off a few on the inside are not going to find any easy rides here and the fingers of razor sharp reef are far less uniform than further out. The 3 sections rarely link up, but when they do, usually on a long period, SSW swell of epic proportions, it is one of the seven wonders of the surf world.
+    path:           \public\images\SpotFotos\Cloudbreak.jpg
+    
+Spot(SantaCruz):
+    surfer:         admin
+    place:          California
+    name:           Santa Cruz
+    description:    >
+                    The beach breaks surrounding Santa Cruz offer a tonne of potential on small to moderate swells. The town peaks can get a little crowded in the summer but a walk to the north of town will reveal plenty of empty waves working throughout the tide. Wind exposed.
+    path:           \public\images\SpotFotos\SantaCruz.jpg
+    
+Spot(Mavericks):
+    surfer:         admin
+    place:          California
+    name:           Mavericks
+    description:    >
+                    World-famous big-wave reef at Pillar Point for expert big-wave surfers only. Primarily a right, but the lefts have been ridden by a few brave men. An incredibly hollow, jacking take-off in front of a series of house-sized boulders known as “The Boneyard” is followed by a long, huge wall ending in a deep channel. Starts to work at 12 feet (3.6m) and never closes out. One of the biggest, scariest waves in the world. There have been two reported shark attacks here, both non-fatal. Heavy currents and lethal rocks on the inside if you get sucked in. This wave has already claimed the lives of big-wave surfer Mark Foo and a kayaker.
+    path:           \public\images\SpotFotos\Mavericks.jpg
+    
+Spot(Chicama):
+    surfer:         admin
+    place:          Perú
+    name:           Chicama
+    description:    >
+                    Chicama is to be found halfway between Lima and the border of Ecuador. The landscape around Chicama is extremely arid, the water is unusually cold and sea fog often shrouds the extensive line-up. Ask any surf traveller where the longest wave in the world is and the answer is invariably Chicama. The actual distance between the furthest take-off point and the fishing jetty where the wave ends is 4km (2.5 mi), although to be fair no one has actually ridden it for that distance. On good days most people end up catching 3-5 different waves on a journey down the point, surfing through 4 defined breaks and using the constant current to drift down to the next take-off point. Furthest out on the tip is El Cape aka Malpaso, which is always the biggest, but not necessarily the best. It draws off a cluster of rocks and starts fast and sucky before hitting the sandier shallows inside the point and backing off into what will become a familiar scene - long sections of slightly tapered, lip-feathering walls that demand a repetitive approach of drive, lip bash, float and snap until a temporary shoulder gives respite for a roundhouse or two. It's the place to go in small conditions, as it picks up W swell better, but cops more wind, plus it is rockier and breaks all tides.
+    path:           \public\images\SpotFotos\Chicama.jpg
+    
+Spot(Supertubos):
+    surfer:         admin
+    place:          Portugal
+    name:           Supertubos
+    description:    >
+                    The name speaks for itself! World-class spot and undoubtedly the best beachbreak in Portugal, Supertubos has become a favourite stop on the world pro tour and a perfect warm-up for Pipeline. Long, heavy, gas-filled tubes are guaranteed as well as a few shut-down close-outs, such is the speed of this wave. The lefts are usually better, but plenty of shorter rights peel off the main peak, especially in NW conditions. It’s at its best with NE winds, a decent SW swell and mid-tide, but these conditions don’t come around everyday.
+    path:           \public\images\SpotFotos\Supertubos.jpg
+    
+Spot(JeffreysBay):
+    surfer:         admin
+    place:          South Africa
+    name:           Jeffreys Bay
+    description:    >
+                    The longest, most perfect righthand pointbreak on the planet, consists of no less than 10 different sections including Kitchen Windows, Magnatubes, Boneyards, Supertubes, Impossibles, Salad Bowls, Coins, Tubes, The Point and finally Albatross. Fingers of basalt hold the sand uniformly, creating the perfect bathymetry for 1km long rides between Boneyards and The Point when the swell is just the right size and perfectly lined up. Supertubes is the stellar section, where the pro competitions are held and the crew are most combative, while Point and Albatross are slower, more manageable walls for intermediates and longboarders. Maintaining high speed and a high line is critical for threading the multiple tube sections and cutting back is rarely a good idea. SW-W is offshore for most of the sections, while NW-NE Berg (or Devil) winds descend from the mountains, blowing into the barrels and creating a nasty chop that is hard to handle on a wave where speed is king.
+    path:           \public\images\SpotFotos\JeffreysBay.jpg

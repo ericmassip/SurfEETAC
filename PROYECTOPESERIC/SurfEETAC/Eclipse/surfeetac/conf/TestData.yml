@@ -1,0 +1,84 @@
+# Test data
+
+User(bob):
+    password:       secret
+    username:       Bob
+    
+User(jeff):
+    password:       secret
+    username:       Jeff
+
+User(admin):
+    password:       admin
+    username:       admin
+    isAdmin:        true
+    
+Spot(ThePeak):
+    surfer:         admin
+    name:           The Peak
+    description:    >
+                    Ola de clase mundial situada en el pequeño pueblo de Bundoran, Sligo, Co. Donegal. Izquierda brutal, larga como Mundaka, derecha rápida, hueca, más corta y tubera.
+                    
+                    Surfeable con marea baja. Si ves a un local, salúdalo con un What's the craic, lad?
+    path:           \public\images\SpotFotos\The_Peak_Bundoran.jpg
+
+Spot(PortGinesta):
+    surfer:         admin
+    name:           Port Ginesta
+    description:    >
+                    Situada junto al puerto deportivo de Port Ginesta es una buena opción los días  de mar de Sur. Para que funcione a pleno rendimiento es necesario un swell medio o grande de S – SE.
+
+                    La ola consta de varias secciones y todo depende de la cantidad de swell  y de la dirección del mismo. Los días buenos la ola aparece  cercana a las rocas, esta sección es la más potente pero también la más expuesta a las corrientes y vientos que en esta zona suelen ser fuertes. Hay una sección intermedia que esta más resguardada pero en la que la ola es más fofa y pierde algo de potencia. 
+    path:           \public\images\SpotFotos\Port_Ginesta.jpg
+    
+Spot(BanzaiPipeline):
+    surfer:         admin
+    name:           Banzai Pipeline
+    description:    >
+                    Banzai Pipeline (más conocida como Pipeline o Pipe) es una rompiente localizada en el distrito hawaiano de Pūpūkea, en la isla de Oahu.
+
+                    La playa de Pipeline está considerada por Travel Channel (propiedad del grupo de Discovery Channel) como una de las mejores playas del mundo. Viene surfeándose de manera oficial desde 1971 y, en la actualidad, es sede fija de una de las pruebas correspondientes al ASP World Tour. Es una de las zonas surferas con más índice de mortalidad, debido a las inmensas olas y a los peligrosos arrecifes. Numerosos fotógrafos y surfistas han fallecido en este paradisíaco lugar por culpa de esta ola.
+    path:           \public\images\SpotFotos\BanzaiPipeline.jpg
+    
+Spot(LaPiste):
+    surfer:         admin
+    name:           La Piste
+    description:    >
+                    Spot a la izquierda del gran Hossegor. Cuando La Graviere está demasiado grande, La Piste es la mejor opción. 
+                    Es un beach break, múltiples picos y múltiples tubos que te puedes pegar.
+    path:           \public\images\SpotFotos\LaPiste.jpg
+                    
+Imagen(erickSurfing):
+    title:          Erick Surfing
+    postedAt:       2015-04-24
+    author:         bob
+    content:        >
+                    Erick dándolo todo.
+                    
+Imagen(guerreroPosturetis):
+    title:          Guerrero Posturetis
+    postedAt:       2015-04-25
+    author:         jeff
+    content:        >
+                    Guerrrero a punto para meterle al tema.
+                    
+Comment(c1):
+    author:         Guest
+    content:        >
+                    Siiiick !
+    postedAt:       2015-06-14
+    foto:           erickSurfing
+    
+Comment(c2):
+    author:         Mike
+    content:        >
+                    Tio gueeeenoooo!
+    postedAt:       2015-06-15
+    foto:           guerreroPosturetis    
+    
+Comment(c3):
+    author:         Tom
+    content:        >
+                    Pumping!!!
+    postedAt:       2015-04-05
+    foto:           erickSurfing

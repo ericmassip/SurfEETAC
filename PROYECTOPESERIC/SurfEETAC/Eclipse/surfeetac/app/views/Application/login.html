@@ -1,0 +1,54 @@
+#{extends 'main.html' /}
+#{set title:'Login' /}
+
+<div id="login">
+
+   #{form @login(), id:'formLogin'}
+   
+   		#{field 'username'}
+
+        <p class="field">
+        
+        <span class="error">${flash.error}</span>
+
+		<br><br>
+
+            <label>Nombre de Usuario:</label>
+
+            <input type="text" name="${field.name}" size="19" value="${username}" />  *
+
+        </p>
+        
+        #{/field}
+
+    #{field 'password'}
+
+        <p class="field">
+
+            <label>Password:</label>
+
+            <input type="password" name="${field.name}" size="19" value="${password}" />  *
+
+        </p>
+        
+       #{/field}
+
+        <p class="buttons">
+
+            <input type="submit" value="Account login" />
+
+        </p>
+
+    #{/form}
+
+ 
+
+    <p>
+
+        <a href="@{register()}">Register New User</a>
+
+    </p>
+
+ 
+
+</div>

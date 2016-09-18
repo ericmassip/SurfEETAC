@@ -1,0 +1,14 @@
+# Test data
+
+User(bob):
+    password:       secret
+    username:       Bob
+    
+User(jeff):
+    password:       secret
+    username:       Jeff
+
+User(erick):
+    password:       admin
+    username:       massip
+    isAdmin:        true       

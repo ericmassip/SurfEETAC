@@ -1,0 +1,51 @@
+*{ Display an image in one of these modes: 'full', 'home' or 'teaser' }*
+ 
+<div class="imagen ${_as == 'teaser' ? 'teaser' : ''}">
+    <h2 class="imagen-title">
+        <a href="#">${_imagen.title}</a>
+    </h2>
+    <div class="imagen-metadata">
+        <span class="imagen-author">by ${_imagen.author.username}</span>,
+        <span class="imagen-date">${_imagen.postedAt.format('dd MMM yy')}</span>
+        #{if _as != 'full'}
+            <span class="imagen-comments">
+                &nbsp;|&nbsp; ${_imagen.comments.size() ?: 'no'} 
+                comment${imagen.comments.size().pluralize()}
+                #{if _imagen.comments}
+                    , latest by ${_imagen.comments[-1].author}
+                #{/if}
+            </span>
+        #{/if}
+    </div>
+    #{if _as != 'teaser'}
+        <div class="imagen-content">
+            <div class="about">Detail: </div>
+            ${_imagen.content.nl2br()}
+        </div>
+    #{/if}
+</div>
+ 
+#{if _as == 'full'}
+    <div class="comments">
+        <h3>
+            ${_imagen.comments.size() ?: 'no'} 
+            comment${_imagen.comments.size().pluralize()}
+        </h3>
+        
+        #{list items:_imagen.comments, as:'comment'}
+            <div class="comment">
+                <div class="comment-metadata">
+                    <span class="comment-author">by ${comment.author},</span>
+                    <span class="comment-date">
+                        ${comment.postedAt.format('dd MMM yy')}
+                    </span>
+                </div>
+                <div class="comment-content">
+                    <div class="about">Detail: </div>
+                    ${comment.content.escape().nl2br()}
+                </div>
+            </div>
+        #{/list}
+        
+    </div>
+#{/if}

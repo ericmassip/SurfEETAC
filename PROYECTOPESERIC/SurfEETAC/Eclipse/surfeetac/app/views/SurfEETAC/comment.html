@@ -1,0 +1,78 @@
+#{extends 'main.html' /}
+#{set title:'Comment' /}
+
+#{form @index()}
+<input type="submit" name="submit" value="Back to The Line-Up">
+#{/form}
+
+<h3>Post a comment</h3>
+
+<div class="post">
+        <h1 class="post-title">${frontImagen.title}</h1>
+        <a href="@{openImagenPhoto(frontImagen.id)}"><img src="@{imagenPhoto(frontImagen.id)}" style="float:left;width:500px;height:300px"></a>
+        <br clear=all>
+        <div class="post-metadata">
+            <span class="post-author">by ${frontImagen.author.username}</span>
+            <span class="post-date">${frontImagen.postedAt.format('MMM dd')}</span>
+            <span class="post-comments">
+                &nbsp;|&nbsp; 
+                ${frontImagen.comments.size() ?: 'no'} 
+                comment${frontImagen.comments.size().pluralize()}
+                #{if frontImagen.comments}
+                    , latest by ${frontImagen.comments[-1].author}
+                #{/if}
+            </span>
+        </div>
+        <div class="post-content">
+            ${frontImagen.content.nl2br()}
+        </div>      
+        #{list items:models.Comment.find("byFoto", frontImagen).fetch(), as:'comment'}
+            <div class="comment">
+                <div class="comment-metadata">
+                    <span class="comment-author">by ${comment.author},</span>
+                    <span class="comment-date">
+                        ${comment.postedAt.format('dd MMM yy')}
+                    </span>
+                </div>
+                <div class="comment-content">
+                    <div class="about">Detail: </div>
+                    ${comment.content.escape().nl2br()}
+                </div>
+            </div>
+        #{/list}
+    </div>
+ 
+#{form @SurfEETAC.postComment(id)}
+
+	#{ifErrors}
+        <p class="error">
+            All fields are required!
+        </p>
+    #{/ifErrors}
+    
+    <p>
+        <label for="content">Your message: </label>
+        <textarea name="content" id="content"></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Submit your comment" />
+    </p>
+#{/form}
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+    $(function() {         
+        // Expose the form 
+        $('form').click(function() { 
+            $('form').expose({api: true}).load(); 
+        }); 
+        
+        // If there is an error, focus to form
+        if($('form .error').size()) {
+            $('form').expose({api: true, loadSpeed: 0}).load(); 
+            $('form input[type=text]').get(0).focus();
+        }
+    });
+</script>

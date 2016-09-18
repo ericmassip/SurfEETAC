@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"  
+        android:orientation="vertical"  
+        android:layout_height="fill_parent"
+       > 
+
+    <TextView
+        android:id="@+id/display1"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        />
+    
+     <TextView
+        android:id="@+id/display2"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Eric/Desktop/UNI3/PES/PROYECTOPESERIC/SurfEETAC/Android/ShareDataAndroid/app/src/main/res/layout/activity_activity2.xml -->

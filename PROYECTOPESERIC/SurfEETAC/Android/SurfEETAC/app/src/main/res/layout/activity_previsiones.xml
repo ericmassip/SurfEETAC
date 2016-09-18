@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="120dp"
+    android:background="@drawable/bsurfers"
+    tools:context=".PrevisionesActivity" >
+
+    <TextView
+        android:id="@+id/tv_comunidad"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/comunidad" />
+
+    <Spinner
+        android:id="@+id/sp_comunidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:prompt="@string/comunidad_prompt"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/tv_spot"
+        android:textSize="25sp"
+        android:paddingTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/spot" />
+
+    <Spinner
+        android:id="@+id/sp_spot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:prompt="@string/spot_prompt"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:background="@android:color/transparent"
+        android:textSize="20sp"
+        android:paddingTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="Buscar"
+        android:text="@string/buscar" />
+
+</LinearLayout>

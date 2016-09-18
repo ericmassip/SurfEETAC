@@ -1,0 +1,17 @@
+23 may 2015 17:13:20,243 INFO  ~ Starting C:\Users\EricMassip\surfeetac
+23 may 2015 17:13:22,661 WARN  ~ You're running Play! in DEV mode
+23 may 2015 17:13:22,958 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+23 may 2015 17:13:34,096 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0 for default
+23 may 2015 17:13:37,044 ERROR ~ HHH000389: Unsuccessful: alter table Comment drop constraint FK9BDE863F810014CD
+23 may 2015 17:13:37,044 ERROR ~ Tabla "COMMENT" no encontrada
+Table "COMMENT" not found; SQL statement:
+alter table Comment drop constraint FK9BDE863F810014CD [42102-176]
+23 may 2015 17:13:37,044 ERROR ~ HHH000389: Unsuccessful: alter table Imagen drop constraint FK82BF6E93A7CD013E
+23 may 2015 17:13:37,044 ERROR ~ Tabla "IMAGEN" no encontrada
+Table "IMAGEN" not found; SQL statement:
+alter table Imagen drop constraint FK82BF6E93A7CD013E [42102-176]
+23 may 2015 17:13:37,060 ERROR ~ HHH000389: Unsuccessful: alter table Spot drop constraint FK276D22A6D9BC86
+23 may 2015 17:13:37,060 ERROR ~ Tabla "SPOT" no encontrada
+Table "SPOT" not found; SQL statement:
+alter table Spot drop constraint FK276D22A6D9BC86 [42102-176]
+23 may 2015 17:13:37,310 INFO  ~ Application 'SurfEETAC' is now started !

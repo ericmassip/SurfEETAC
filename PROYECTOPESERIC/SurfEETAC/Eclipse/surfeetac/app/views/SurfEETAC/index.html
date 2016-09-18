@@ -1,0 +1,186 @@
+#{extends 'main.html' /}
+#{set title:'The Line-Up' /}
+
+<div>
+<hr/>
+<ul class="menuVert1">
+
+<li>
+#{form @logout()}
+<input type="submit" name="submit" value="Log Out">
+#{/form}
+</li>
+
+<li> 
+#{form @GoToSpots()}
+<input type="submit" name="submit" value="Spots">
+#{/form}
+</li>
+
+<li> 
+#{form @GoToMySpots()}
+	<input type="submit" name="submit" value="My Spots">
+#{/form}
+</li>
+
+<li> 
+#{form @GoToMyProfile()}
+	<input type="submit" name="submit" value="My Profile">
+#{/form}
+</li>
+
+<li> 
+#{form @GoToPrevisiones()}
+	<input type="submit" name="submit" value="Surf Forecast">
+#{/form}
+</li>
+
+<li> 
+#{form @GoToVideos()}
+	<input type="submit" name="submit" value="Videos">
+#{/form}
+</li>
+
+</ul>
+<div class="limpiador"></div>
+</div>
+
+<br>
+
+#{if flash.success}
+    <p class="success">${flash.success}</p>
+#{/if}
+
+#{if flash.error}
+    <p class="error">${flash.error}</p>
+#{/if}
+
+#{form @GoToHisProfile(), id:'GoToHisProfile'}
+   		
+   		<div style="float:right">
+   		
+   		#{field 'username'}
+		
+        <p class="field">
+
+		<br><br>
+
+            <label>Search for:</label>
+
+            <input type="text" name="${field.name}" size="19" value="${username}" />  *
+            
+            <input type="submit" name="submit" value="Profile">
+
+        </p>
+        
+        #{/field}
+        
+        </div>
+
+#{/form}
+
+ 
+#{if frontImagen}
+    <div class="post">
+        <h1 class="post-title">${frontImagen.title}</h1>
+        <a href="@{GoToAProfile(frontImagen.id)}"><img src="@{imagenPhoto(frontImagen.id)}" style="float:left;width:500px;height:300px"></a>
+        <br clear=all>
+        <div class="post-metadata">
+            <span class="post-author">by ${frontImagen.author.username}</span>
+            <span class="post-date">${frontImagen.postedAt.format('MMM dd')}</span>
+            <span class="post-comments">
+                &nbsp;|&nbsp; 
+                ${frontImagen.comments.size() ?: 'no'} 
+                comment${frontImagen.comments.size().pluralize()}
+                #{if frontImagen.comments}
+                    , latest by ${frontImagen.comments[-1].author}
+                #{/if}
+            </span>
+        </div>
+        <div class="post-content">
+            ${frontImagen.content.nl2br()}
+        </div>
+        
+        #{form @SurfEETAC.comment(frontImagen.id)}
+		<input style="float:right" type="submit" name="submit" value="Post a comment">
+		#{/form}
+	      
+        #{list items:models.Comment.find("byFoto", frontImagen).fetch(), as:'comment'}
+            <div class="comment">
+                <div class="comment-metadata">
+                    <span class="comment-author">by ${comment.author},</span>
+                    <span class="comment-date">
+                        ${comment.postedAt.format('dd MMM yy')}
+                    </span>
+                </div>
+                <div class="comment-content">
+                    <div class="about">Detail: </div>
+                    ${comment.content.escape().nl2br()}
+                </div>
+            </div>
+        #{/list}
+    </div>
+    
+    <br><br><br>
+    
+    #{if olderImagenes}
+        <div class="older-images">    
+            <h3>Older images <span class="from">from this web</span></h3>
+        
+            #{list items:olderImagenes, as:'imagen'}
+            
+                <div class="post">
+                    <h2 class="post-title">${imagen.title}</h2>
+                    <a href="@{GoToAProfile(imagen.id)}"><img src="@{imagenPhoto(imagen.id)}" style="float:left;width:500px;height:300px"></a>
+                    <br clear=all>
+                    <div class="post-metadata">
+                        <span class="post-author">
+                            by ${imagen.author.username}
+                        </span>
+                        <span class="post-date">
+                            ${imagen.postedAt.format('dd MMM yy')}
+                        </span>
+                        <div class="post-comments">
+                            ${imagen.comments.size() ?: 'no'} 
+                            comment${imagen.comments.size().pluralize()}
+                            #{if imagen.comments}
+                                - latest by ${imagen.comments[-1].author}
+                            #{/if}
+                        </div>
+                    </div>
+                    <div class="post-content">
+            			${imagen.content.nl2br()}
+        			</div>
+        			
+        			#{form @SurfEETAC.comment(imagen.id)}
+					<input style="float:right" type="submit" name="submit" value="Post a comment">
+					#{/form}      
+        			
+        			#{list items:models.Comment.find("byFoto", imagen).fetch(), as:'comment'}
+            			<div class="comment">
+                			<div class="comment-metadata">
+                    		<span class="comment-author">by ${comment.author},</span>
+                    		<span class="comment-date">
+                        		${comment.postedAt.format('dd MMM yy')}
+                    		</span>
+                		</div>
+                		<div class="comment-content">
+                    		<div class="about">Detail: </div>
+                    			${comment.content.escape().nl2br()}
+                			</div>
+            			</div>
+        			#{/list}
+                </div>
+                <br><br><br>
+            #{/list}
+        </div>
+        
+    #{/if}
+    
+#{/if}
+ 
+#{else}
+    <div class="empty">
+        There is currently nothing here.
+    </div>
+#{/else}

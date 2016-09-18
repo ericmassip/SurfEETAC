@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">SurfEETAC</string>
+    <string name="login">SurfEETAC</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    //login activity
+    <string name="hint_user">Enter your username</string>
+    <string name="hint_pwd">Enter your password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="register_button">Register</string>
+    <string name="title_activity_main">Main</string>
+
+    //register activity
+    <string name="registrarse_button">Register</string>
+    <!--<string name="hint_user">Enter your username</string>-->
+    <!--<string name="hint_pwd">Enter your password</string>-->
+    <string name="title_activity_register">Register</string>
+
+    //main activity
+    <string name="Spots">Spots</string>
+    <string name="MySpots">My Spots</string>
+    <string name="Previsiones">Surf Forecast</string>
+    <string name="MyProfile">My Profile</string>
+    <string name="title_activity_previsiones">Previsiones</string>
+    <string name="Videos">Videos</string>
+
+    //previsiones activity
+    <string name="comunidad">Select a community</string>
+    <string name="spot">Select a spot</string>
+    <string name="comunidad_prompt">Pick community</string>
+    <string name="spot_prompt">Pick spot</string>
+    <string name="buscar">Show prevision</string>
+    <string name="message">You have selected %1$s (%2$s)</string>
+    <string name="title_activity_spots">Spots</string>
+    <string name="title_activity_videos">Videos</string>
+
+    //videos activity
+    <string name="WatchVideo">Go watch video</string>
+    <string name="video1">Dane Reynolds Movie: Loaded</string>
+    <string name="video2">Slow Dance - Full Movie - Marine Layer Productions [HD]</string>
+    <string name="video3">Billabong Adventure Division - Ireland - April 2015</string>
+    <string name="video4">"New Inca Surf Spot Discovery", Mockumentary by Kepa Acero</string>
+    <string name="video5">Mason Ho: Made in Hawaii</string>
+    <string name="title_activity_my_spots">MySpots</string>
+
+
+</resources>

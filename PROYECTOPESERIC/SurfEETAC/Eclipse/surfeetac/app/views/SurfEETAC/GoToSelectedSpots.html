@@ -1,0 +1,55 @@
+#{extends 'main.html' /}
+#{set title:'Spots' /}
+
+#{form @index()}
+<input type="submit" name="submit" value="Back to The Line-Up">
+#{/form}
+
+#{form @GoToSpots()}
+<input type="submit" name="submit" value="Show all Spots">
+#{/form}
+
+<h1>Spots</h1>
+
+<h2>If you want to add a spot to My Spots, just click on its picture</h3>
+
+#{form @GoToSelectedSpots()}
+
+<div>
+	<h3>Find by Country or State</h3>
+
+	#{select 'place', valueProperty:'place', labelProperty:'place'}
+
+		<option>Catalunya</option>
+		<option>Ireland</option>
+		<option>Hawaii</option>
+		<option>France</option>
+		<option>Morocco</option>
+		<option>Australia</option>
+		<option>Basque Country</option>
+		<option>Fiji</option>
+		<option>South Africa</option>
+		<option>Perú</option>
+		<option>California</option>
+		<option>Portugal</option>
+	
+	#{/select}
+
+<input type="submit" name="submit" value="Select">
+
+</div>
+
+#{/form}
+
+#{list items:selectedSpots, as:'spot'}
+
+	<div style="margin: 10px 10px 0px 10px;">
+	<h2>${spot.name}</h2>
+    <a href="@{anadirSpotselected(spot)}"><img src="${spot.path}" style="float:left;width:350px;height:228px"></a>
+    <br clear=all>
+    <p style="margin: 10px 0px 0px 0px;">${spot.place}</p>
+    <p style="margin: 10px 0px 0px 0px;">${spot.description}</p>
+    </div>
+    <br>
+    
+#{/list}

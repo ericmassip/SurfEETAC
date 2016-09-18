@@ -1,0 +1,90 @@
+#{extends 'main.html' /}
+#{set title:'My Profile' /}
+
+#{form @index()}
+<input type="submit" name="submit" value="Back to The Line-Up">
+#{/form}
+
+<h1>My Images</h1>
+
+#{list items:MyImages, as:'frontImagen'}
+
+	<div class="post">
+        <h1 class="post-title">${frontImagen.title}</h1>
+        <a href="@{openImagenPhoto(frontImagen.id)}"><img src="@{imagenPhoto(frontImagen.id)}" style="float:left;width:500px;height:300px"></a>
+        <br clear=all>
+        <div class="post-metadata">
+            <span class="post-author">by ${frontImagen.author.username}</span>
+            <span class="post-date">${frontImagen.postedAt.format('MMM dd')}</span>
+            <span class="post-comments">
+                &nbsp;|&nbsp; 
+                ${frontImagen.comments.size() ?: 'no'} 
+                comment${frontImagen.comments.size().pluralize()}
+                #{if frontImagen.comments}
+                    , latest by ${frontImagen.comments[-1].author}
+                #{/if}
+            </span>
+        </div>
+        <div class="post-content">
+            ${frontImagen.content.nl2br()}
+        </div>      
+        
+        #{form @SurfEETAC.comment(frontImagen.id)}
+		<input style="float:right" type="submit" name="submit" value="Post a comment">
+		#{/form}
+		
+        #{list items:models.Comment.find("byFoto", frontImagen).fetch(), as:'comment'}
+            <div class="comment">
+                <div class="comment-metadata">
+                    <span class="comment-author">by ${comment.author},</span>
+                    <span class="comment-date">
+                        ${comment.postedAt.format('dd MMM yy')}
+                    </span>
+                </div>
+                <div class="comment-content">
+                    <div class="about">Detail: </div>
+                    ${comment.content.escape().nl2br()}
+                </div>
+            </div>
+        #{/list}
+    </div>
+
+#{/list}
+
+<br><br>
+
+<h1>Add Image</h1>
+
+#{form @addImagenWithFileName(), enctype:'multipart/form-data'}
+
+	#{if flash.error}
+    <p class="error">${flash.error}</p>
+	#{/if}
+
+   <input type="file" name="photo">
+   #{field 'titleImg'}
+        <p>
+            Title:
+            <input type="text" name="${field.name}" size="20" value="${titleImg}"> *
+        </p>
+    #{/field}
+    #{field 'content'}
+        <p>
+            Content:
+            <input type="text" name="${field.name}" size="50" value="${content}"> *
+        </p>
+    #{/field}
+   <input style="float:right" type="submit" name="submit" value="Upload">
+
+#{/form}
+
+<br>
+
+<h1>Delete image</h1>
+
+#{form @deleteImagen()}
+
+#{select 'title', items:MyImages, valueProperty:'title', labelProperty:'title' /}
+<input type="submit" name="submit" value="Delete">
+
+#{/form}

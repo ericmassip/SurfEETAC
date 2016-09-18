@@ -1,0 +1,67 @@
+#{extends 'main.html' /}
+
+#{set title:'Register' /}
+
+#{ifErrors}
+<div class="error">
+    <h2>Oops, please correct these errors</h2>
+</div>
+#{/ifErrors}
+
+ <h1>Register</h1>
+ 
+ <br>
+ 
+ <span class="error">${flash.error}</span>
+
+ #{form @saveUser()}
+
+    #{field 'username'}
+
+        <p>
+
+            Username:
+
+            <input type="text" name="${field.name}" size="16" value="${username}"> *
+
+            <span class="error">${field.error}</span>
+
+        </p>
+
+    #{/field}
+
+    #{field 'password'}
+
+        <p>
+
+            Password:
+
+            <input type="password" name="${field.name}" size="16" value="${password}"> *
+
+            <span class="error">${field.error}</span>
+
+        </p>
+
+    #{/field}
+
+    #{field 'verifyPassword'}
+
+        <p>
+
+            Verify password:
+
+            <input type="password" name="${field.name}" size="16" value="${verifyPassword}"> *
+
+            <span class="error">${field.error}</span>
+
+        </p>
+
+    #{/field}   
+
+    <p class="buttons">
+
+        <input type="submit" value="Register"> <a href="@{Start()}">Cancel</a>   
+
+    </p>
+
+#{/form}

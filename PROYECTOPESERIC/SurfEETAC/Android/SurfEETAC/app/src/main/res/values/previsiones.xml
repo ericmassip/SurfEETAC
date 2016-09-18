@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Each position of id refers to an string array -->
+
+    <array name="array_comunidad_a_spots">
+        <item>@array/spots_Almeria</item>
+        <item>@array/spots_Catalunya</item>
+        <item>@array/spots_ComunidadValenciana</item>
+        <item>@array/spots_IslasBaleares</item>
+        <item>@array/spots_Murcia</item>
+    </array>
+
+
+
+    <string-array name="Comunidades">
+        <item>Almeria</item>
+        <item>Catalunya</item>
+        <item>Comunidad Valenciana</item>
+        <item>Islas Baleares</item>
+        <item>Murcia</item>
+    </string-array>
+
+
+
+    <string-array name="spots_Almeria">
+        <item>Almeria</item>
+        <item>Carboneras</item>
+    </string-array>
+
+    <string-array name="spots_Catalunya">
+        <item>Barcelona</item>
+        <item>Cap de Creus</item>
+        <item>Tarragona</item>
+    </string-array>
+
+    <string-array name="spots_ComunidadValenciana">
+        <item>Alicante</item>
+        <item>Castellon</item>
+        <item>Gandia</item>
+        <item>Torrevieja</item>
+        <item>Valencia</item>
+        <item>Vinaros</item>
+    </string-array>
+
+    <string-array name="spots_IslasBaleares">
+        <item>Alcudia</item>
+        <item>Ibiza</item>
+        <item>Mahon</item>
+        <item>Palma de Mallorca</item>
+    </string-array>
+
+    <string-array name="spots_Murcia">
+        <item>Cartagena</item>
+    </string-array>
+
+</resources>
